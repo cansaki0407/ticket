@@ -18,9 +18,11 @@ import java.util.Map;
 @RequestMapping("/travel")
 public class LoginController {
 
+	@GetMapping("/kaptcha")
+	public Map<String,String> getImageCode(){
+		return null;
+	}
 
 }
 
-@GetMapping("/kaptcha")
-@ApiOperation("登录获取验证码")
-public Map<String,String>
+
