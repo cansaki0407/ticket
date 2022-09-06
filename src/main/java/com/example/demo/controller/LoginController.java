@@ -20,7 +20,7 @@ public class LoginController {
 
 	@GetMapping("/kaptcha")
 	public Map<String,String> getImageCode(){
-		return null;
+		return null ; 
 	}
 
 }
