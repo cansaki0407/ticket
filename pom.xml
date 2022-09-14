@@ -66,11 +66,29 @@ http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <!--			<version>2.6.0</version>-->
 <!--		</dependency>-->
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.github.penggle</groupId>
 			<artifactId>kaptcha</artifactId>
 			<version>2.3.2</version>
+		</dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.6</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.whvcse</groupId>
+			<artifactId>easy-captcha</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+
+
+
+
 	</dependencies>
 
 	<build>

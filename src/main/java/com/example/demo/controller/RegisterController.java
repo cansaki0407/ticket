@@ -31,6 +31,8 @@ public class RegisterController {
 	}
 
 	//注册时获取手机验证码
+	//http://localhost:8080/travel/phonecode46546465
+	//http://localhost:8080/travel/phonecode/
 	@GetMapping("phonecode/{phone}")
 	public String getPhoneCode(@PathVariable("phone") String phoneNumber) throws Exception{
 		return  registerService.getPhoneCode(phoneNumber);

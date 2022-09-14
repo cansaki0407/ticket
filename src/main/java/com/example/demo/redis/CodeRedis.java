@@ -1,7 +1,6 @@
 package com.example.demo.redis;
 
 import com.example.demo.utils.PhoneCodeUtil;
-import com.google.code.kaptcha.impl.DefaultKaptcha;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -62,5 +61,16 @@ public class CodeRedis {
 		}
 	}
 
-
+	//校验登录验证码是否跟Redis里的验证码相同
+	public void verifyLoginCode (String redisCodeKey,String code) throws Exception{
+		String redisCode = (String) redisTemplate.opsForValue().get(redisCodeKey);
+		if(redisCode.equals(code)){
+			System.out.println("验证码正确");
+			return;
+		}
+		else{
+			System.out.println("验证码输入错误请重新输入");
+			throw new Exception("验证码输入错误");
+		}
+	}
 }
