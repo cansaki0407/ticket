@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mappers.TicketsMapper">
+<!--    //添加新的旅游票对象-->
+    <insert id="createTicket">
+        insert into `tickets` (goods_id,image,title,price,province,city) values
+        (#{ticketBean.goods_id},#{ticketBean.image},#{ticketBean.title},
+         #{ticketBean.price},#{ticketBean.province},#{ticketBean.city})
+    </insert>
+<!--    //删除旅游票对象-->
+    <delete id="removeTicket">
+        delete from `tickets` where `goods_id`=#{ticketBean.goods_id}
+    </delete>
+<!--    //获取所有的旅游票对象-->
+    <select id="getAllTickets" resultType="com.example.demo.bean.TicketBean">
+        select * from `tickets`
+    </select>
+
+<!--    //修改旅游票对象-->
+    <update id="updateTicket">
+
+    </update>
+</mapper>
