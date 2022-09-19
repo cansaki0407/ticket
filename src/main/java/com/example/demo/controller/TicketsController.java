@@ -45,4 +45,7 @@ public class TicketsController {
 	public void updateTicket(@PathVariable String goods_id, @RequestBody Map<String,Object> ticketCondition) {
 		ticketsService.updateTicket(goods_id,ticketCondition);
 	}
+
+	//按景点类型类型选择的选择器所需要的下拉数据
+
 }

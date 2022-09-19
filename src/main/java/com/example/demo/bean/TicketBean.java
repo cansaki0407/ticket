@@ -11,6 +11,7 @@ import java.math.BigDecimal;
  */
 @Data
 public class TicketBean {
+	private Integer id;
 	private String goods_id;
 	//image为图片的路径
 	private String image;
@@ -18,4 +19,5 @@ public class TicketBean {
 	private BigDecimal price;
 	private String province;
 	private String city;
+	private String type;
 }
