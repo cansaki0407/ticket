@@ -25,4 +25,16 @@ public interface TicketsService {
 
 	//修改旅游票对象
 	public void updateTicket(String goods_id, Map<String,Object> ticketCondition);
+
+	//获取景点类型选择器下拉框的数据
+	public List<String> getScenic_spot_type();
+
+	//按景点名称搜索
+	public List<TicketBean> getTicketsByName(Map<String,Object> name);
+
+	//按地名搜索
+	public List<TicketBean> getTicketsByZone(String name);
+
+	//按类型搜索
+	public List<TicketBean> getTicketsByType(String type);
 }

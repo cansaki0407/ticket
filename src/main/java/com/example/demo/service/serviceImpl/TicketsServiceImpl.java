@@ -43,4 +43,27 @@ public class TicketsServiceImpl implements TicketsService {
 	public void updateTicket(String goods_id, Map<String,Object> ticketBean) {
 		ticketsMapper.updateTicket(goods_id,ticketBean);
 	}
+
+	//获取所有景点类型的集合
+	@Override
+	public List<String> getScenic_spot_type() {
+		return ticketsMapper.getScenic_spot_type();
+	}
+
+	//按景点名称搜索
+	@Override
+	public List<TicketBean> getTicketsByName(Map<String,Object> name) {
+		return ticketsMapper.getTicketsByName(name);
+	}
+
+	//按地名搜索
+	@Override
+	public List<TicketBean> getTicketsByZone(String name) {
+		return ticketsMapper.getTicketsByZone(name);
+	}
+
+	@Override
+	public List<TicketBean> getTicketsByType(String type) {
+		return ticketsMapper.getTicketsByType(type);
+	}
 }

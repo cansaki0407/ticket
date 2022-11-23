@@ -46,6 +46,31 @@ public class TicketsController {
 		ticketsService.updateTicket(goods_id,ticketCondition);
 	}
 
-	//按景点类型类型选择的选择器所需要的下拉数据
+	//获取景点类型选择器下拉框的数据
+	//localhost:8080/tickets/getScenic_spot_type
+	@GetMapping("/getScenic_spot_type")
+	public List<String> getScenic_spot_type(){
+		return ticketsService.getScenic_spot_type();
+	}
+
+	//按景点名称搜索
+	@PostMapping("/getTicketsByName")
+	//http://localhost:8080/tickets/getTicketsByName
+	public List<TicketBean> getTicketsByName(@RequestBody Map<String,Object> name){
+		return ticketsService.getTicketsByName(name);
+	}
+
+	//按地名搜索
+	//http://localhost:8080/tickets/getTicketsByZone
+	@PostMapping("/getTicketsByZone")
+	public List<TicketBean> getTicketsByZone(@RequestBody String zone){
+		return ticketsService.getTicketsByZone(zone);
+	}
+
+	//按类型搜索
+	@GetMapping("/getTicketsByType")
+	public List<TicketBean> getTicketsByType(@RequestParam(value = "type") String type){
+		return ticketsService.getTicketsByType(type);
+	}
 
 }

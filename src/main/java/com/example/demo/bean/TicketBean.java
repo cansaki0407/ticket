@@ -20,4 +20,5 @@ public class TicketBean {
 	private String province;
 	private String city;
 	private String type;
+	private int stocks;
 }

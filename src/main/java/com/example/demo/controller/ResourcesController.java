@@ -24,9 +24,11 @@ public class ResourcesController {
 	public byte[] getPicture(HttpServletRequest request) throws IOException {
 		//String imagePath =new String(request.getRequestURI().substring(18).getBytes("ISO-8859-1"),"utf-8");
 		String imagePath = request.getRequestURI().substring(18);
+		String property = System.getProperty("user.dir");
+		String path = property+"/src/main/resources";
 //		File file = new File("C:\\Users\\LP\\Desktop\\资源仓库"+imagePath);
-		File file = new File("C:\\Users\\LP\\Desktop\\pipi\\springBoot\\demo\\src\\main\\resources"+imagePath);
-
+//		File file = new File("C:\\Users\\LP\\Desktop\\pipi\\springBoot\\demo\\src\\main\\resources"+imagePath);
+		File file = new File(path+imagePath);
 		FileInputStream inputStream = null;
 		byte[] bytes = null;
 		try {
